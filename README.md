@@ -31,7 +31,7 @@ How to use
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bounceslider/jquery.bounceslider.js"></script>
     
-Note: Note: if you've already used Modernizr library you need to check in you script whather css animation is supported by the borwser to make Baounce Slider work properly.
+Note: Note: if you've already used [Modernizr library](https://github.com/Modernizr/Modernizr) you need to check in you script whather css animation is supported by the borwser to make Baounce Slider work properly.
 
 ### 2. Add markup:
 
