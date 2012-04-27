@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Bounce Slider | A really simple, responsive image slider.</title>
+		<meta name="description" content="Bounce Slider - a really simple, responsive image slider" />
+		<meta name="author" content="Olga Grabek" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<script type="text/javascript" src="javascript/bounceslider/modernizr.js"></script>
+		<link href="styles/site.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="styles/bounce_slider.css" type="text/css" rel="stylesheet" media="all" />
+		<!--[if gte IE 9]>
+		  <style type="text/css">
+		    .gradient {
+		       filter: none;
+		    }
+		  </style>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<header role="banner">
+				<hgroup>
+					<h1><span>Bounce Slider</span></h1>
+					<h2>A really simple, responsive image slider with descriptions.</h2>	
+				</hgroup>
+				<a href="https://github.com/Olgagr" title="go to github and fork me" class="fork-me">Fork me on GitHub</a>
+			</header>
+			<div id="content">
+				<div class="bounce-slider" id="first">
+					<ul>
+						<li>
+							<p class="bounce-desc right-side"><span>Dare to be yourself</span></p>
+							<img src="images/dare_to_be_yourself.jpg" alt="image 1"/>
+						</li>
+						<li>
+							<p class="bounce-desc left-side"><span>You can accomplish anything if you're willing to pay the price</span></p>
+							<img src="images/pay_the_price.jpg" alt="image 2"/>
+						</li>
+						<li>
+							<p class="bounce-desc left-side"><span>Don't wish it were easier, wish you were better</span></p>
+							<img src="images/climbing.jpg" alt="image 3"/>
+						</li>
+					</ul>
+					<span class="next bounce-nav">&gt;</span>	
+					<span class="prev bounce-nav">&lt;</span>
+				</div>
+				<p>BounceSlider is a tiny jQuery plugin that allows to create simple slideshow using images inside ul. It depends on jQuery and Modernizr to work properly in browsers which don’t support css animation.</p>
+				<p>BounceSlider is simple and don't try to do everything. So you shouldn't expect tons of features and options to set. In return you get small file size, which is so important in responsive design. Enjoy!</p>
+				<h3>Features</h3>
+				<ul class="features">
+					<li>Fully responsive</li>
+					<li>Small size</li>
+					<li>Simple markup using unordered lists</li>
+					<li>Automatic and manual transition between slides</li>
+					<li>Multiple slideshows supported</li>
+					<li>Separate pagination and next/prev controls</li>
+					<li>Support for gestures on mobile (swipe to go between slides)</li>
+					<li>Different look&amp;feel for different platform</li>
+				</ul>
+				<h3>How to use</h3>
+				<ol>
+					<li>1. Link files:
+<pre>
+<code>
+&lt;script type="text/javascript" src="javascript/bounceslider/modernizr.js"&gt;&lt;/script&gt;
+&lt;link href="styles/bounce_slider.css" type="text/css" rel="stylesheet" media="all" /&gt;
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="javascript/bounceslider/jquery.bounceslider.js">&lt;/script&gt;
+</code>
+</pre>
+						<p>Note: if you've already used <a href="http://modernizr.com/">Modernizr library</a> you need to check in you script whather css animation is supported by the borwser to make Baounce Slider work properly.</p>
+					</li>
+					<li>
+						2. Add Markup:
+<pre>
+<code>
+&lt;div class="bounce-slider" id="slider-id"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;
+			&lt;p class="bounce-desc left-side"&gt;&lt;span&gt;Description image 1&lt;/span&gt;&lt;/p&gt;
+			&lt;img src="image1.jpg" alt="image 1"/&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;p class="bounce-desc right-side"&gt;&lt;span&gt;Description image 2&lt;/span&gt;&lt;/p&gt;
+			&lt;img src="image2.jpg" alt="image 2"/&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;span class="next bounce-nav"&gt;&gt;&lt;/span&gt;	
+	&lt;span class="prev bounce-nav"&gt;&lt;&lt;/span&gt;
+&lt;/div&gt;
+</code>
+</pre>
+					</li>
+					<li>
+						3. Hook up the slideshow:
+<pre>
+<code>
+jQuery(document).ready(function($){
+	$('#slider-id').bounceSlider();
+});	
+</code>
+</pre>
+					</li>
+					<li>
+						4. Set options:
+<pre>
+<code>
+$('#slider-id').bounceSlider({
+	maxWidth: '300px', // String: maxiumum width of the slider
+	bottomButtonsAsNumbers: true, // Boolean: if true the bottom navigation will show the slide number.
+	auto: true, // Boolean: animate slides automatically 	
+	timeout: 4000 // Number: time between slide transitions, in milliseconds. It only has impact if 'auto' setting is 'true'
+});	
+</code>
+</pre>
+					</li>	
+				</ol>
+				<p class="github-download"><a href="https://github.com/Olgagr/bounce-slider" title="go on GitHub and download plugin">Download from GitHub</a></p>
+			</div>
+			<footer>
+				<p>
+					images: <a href="http://pl.linkedin.com/in/agatav" title="Linkedin Agata's profile">Agata Imielińska</a>, <a href="http://www.flickr.com/photos/49770916@N06/4711890708" title="go to Flick">Articularnos.com</a>, <a href="http://www.flickr.com/photos/17467655@N00/2550737319" title="go to Flick">lastbeats</a>
+				</p>
+			</footer>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/bounceslider/jquery.bounceslider.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('#first').bounceSlider({auto: true});
+			});
+		</script>
+		<script type="text/javascript">
+			/* iOS viewport scaling bug fix: http://adactio.com/journal/4470 */
+			if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+			  var viewportmeta = document.querySelector('meta[name="viewport"]');
+			  if (viewportmeta) {
+			    viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+			    document.body.addEventListener('gesturestart', function() {
+			      viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+			    }, false);
+			  }
+			}	
+		</script>
+	</body>
+</html>

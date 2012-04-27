@@ -64,6 +64,10 @@ Note: Note: if you've already used [Modernizr library](https://github.com/Modern
     	auto: true, // Boolean: animate slides automatically 	
     	timeout: 4000 // Number: time between slide transitions, in milliseconds. It only has impact if 'auto' setting is 'true'
     });
+    
+### 5. Demo:
+
+For demo go to [http://bounceslider.design4mobile.eu](http://bounceslider.design4mobile.eu), or download this repository as a zip file and and open "index.html" from the "demo" folder.
 
 
 
