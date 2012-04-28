@@ -14,7 +14,9 @@
 			maxWidth: '',
 			bottomButtonsAsNumbers: false,
 			auto: false,                 
-			timeout: 5000
+			timeout: 5000, 
+			bottomNavigation: true,
+			nextPrevNavigation: true
 		};
 		
 		var o = $.extend(defaults, options);
@@ -28,6 +30,11 @@
 				maxIndex = slidersAmount - 1
 				slidesShortcut = [];
 			
+			/* hidding side navigation */
+			if(!o.nextPrevNavigation){
+				$('.bounce-nav').hide();
+			}
+			
 			/* z-index settings */
 			var bottomButtonClass= '';
 			for(var i = 1; i <= slidersAmount; i++){
@@ -36,12 +43,13 @@
 				slidesShortcut.push('<li data-goto-slide="' + i + '" class="' + bottomButtonClass + '">'+ i +'</li>');	
 			}
 			
-			/* add bottom slide buttons */	
-			var bottomButtonsClass = o.bottomButtonsAsNumbers ? 'bounce-bottom-buttons numbers' : 'bounce-bottom-buttons';
-			$('<ol/>').addClass(bottomButtonsClass)
-					  .append(slidesShortcut.join(''))
-					  .appendTo($this);
-			
+			/* add bottom slide buttons */
+			if(o.bottomNavigation){
+				var bottomButtonsClass = o.bottomButtonsAsNumbers ? 'bounce-bottom-buttons numbers' : 'bounce-bottom-buttons';
+				$('<ol/>').addClass(bottomButtonsClass)
+						  .append(slidesShortcut.join(''))
+						  .appendTo($this);
+			}	
 			
 			/* set max width of slider */
 			if(o.maxWidth){
