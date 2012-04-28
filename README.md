@@ -18,6 +18,7 @@ Features
 * Automatic and manual transition between slides
 * Multiple slideshows supported
 * Separate pagination and next/prev controls
+* Showing/hidding pagination and next/prev controls
 * Support for gestures on mobile (swipe to go between slides)
 * Different look&feel for different platform
 
