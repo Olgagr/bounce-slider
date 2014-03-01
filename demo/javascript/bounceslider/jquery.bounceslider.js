@@ -1,4 +1,4 @@
-/*! Bounce Slider v.1.0
+/*! Bounce Slider v.1.0.1
  * http://bounceslider.design4mobile.eu
  * http://design4mobile.eu
  *
@@ -16,7 +16,8 @@
 			auto: false,                 
 			timeout: 5000, 
 			bottomNavigation: true,
-			nextPrevNavigation: true
+			nextPrevNavigation: true,
+			pauseOnHover: true
 		};
 		
 		var o = $.extend(defaults, options);
@@ -153,6 +154,16 @@
 				$('.bounce-bottom-buttons li[data-goto-slide="'+ elementNumber +'"]', $this).addClass('active');	
 			};
 			
+			/* pause on hover */
+			if(o.pauseOnHover) {
+				$('> ul', $this).bind('mouseover', function(){
+					clearInterval(autoplay);		
+				});
+
+				$('> ul', $this).bind('mouseout', function(){
+					setIntervalAgain();	
+				});
+			} 
 			
 			/* next slide */
 			$('.bounce-nav.next', $this).bind(touchEndEvent, function(){

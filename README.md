@@ -64,6 +64,7 @@ Note: Note: if you've already used [Modernizr library](https://github.com/Modern
     	bottomButtonsAsNumbers: true, // Boolean: if true the bottom navigation will show the slide number.
     	auto: true, // Boolean: animate slides automatically 	
     	timeout: 4000 // Number: time between slide transitions, in milliseconds. It only has impact if 'auto' setting is 'true'
+        pauseOnHover: false // Pause animation on hover
     });
     
 ### 5. Demo:
